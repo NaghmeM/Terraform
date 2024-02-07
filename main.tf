@@ -1,13 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
+resource "aws_instance" "test_web" {
+  ami           = ami-0c24ee2a1e3b9df45
+  instance_type = "t2.micro"
+
+  tags = {
+    Created_by = "terraform"
   }
-
-  required_version = ">= 1.2.0"
 }
-
-provider "aws" {}
-ecjo
