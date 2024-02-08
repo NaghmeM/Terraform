@@ -1,6 +1,6 @@
-resource "aws_instance" "test_web" {
-  ami           = ami-0c24ee2a1e3b9df45
-  instance_type = "t2.micro"
+resource "aws_instance" "testweb" {
+  ami           = "ami-0014ce3e52359afbd"
+  instance_type = "t3.micro"
 
   tags = {
     Created_by = "terraform"
